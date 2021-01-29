@@ -1,1 +1,1 @@
-# DSAs
+# Data Structure Algos
