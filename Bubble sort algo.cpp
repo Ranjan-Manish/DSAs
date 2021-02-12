@@ -10,20 +10,13 @@ using namespace std;
 int main()
 {
     cout<<"Hello World"<<endl;
-    int flg=0,n,a[n];
-    cout<<"Enter the size of array"<<endl;
-    cin>>n;
-    for(int i=0; i<n; i++){
-        cout<<"Enter the data"<<endl;
-        cin>>a[i];
-    }
+    int a[6]={48,36,25,58,12,0};
+    int flg=0, n=sizeof(a)/sizeof(a[0]);
 
-    for(int j=0; j<n-1; j++){
-        for(int k=0; k<n-1-j; k++){
-            if(a[k]>a[k+1]){
-                int temp = a[k];
-                a[k]=a[k+1];
-                a[k+1]=temp;
+    for(int i=0; i<n-1; i++){
+        for(int j=0; j<n-1-i; j++){
+            if(a[j]>a[j+1]){
+                swap(a[j], a[j+1]);
                 flg=1;
             }
         }
