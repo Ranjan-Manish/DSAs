@@ -9,15 +9,9 @@ using namespace std;
 
 int main()
 {
-    int n;
-    cout<<"Hello World"<<endl<<"Enter the size of array"<<endl;
-    cin>>n;
-    int a[n], temp,min;
-    for(int x=0; x<n; x++){
-        cout<<"Enter the data"<<endl;
-        cin>>a[x];
-    }
-
+    int a[6]={48,23,56,-1,12,0};
+    int temp, min, n=sizeof(a)/sizeof(a[0]);
+    
     for(int i=0; i<n-1;i++){
         min=i;
         for(int j=i+1;j<n;j++){
@@ -26,9 +20,7 @@ int main()
             }
         }
         if(min!=i){
-            temp=a[i];
-            a[i]=a[min];
-            a[min]=temp;
+            swap(a[i], a[min]);
         }
     }
 
