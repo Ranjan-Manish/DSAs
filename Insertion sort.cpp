@@ -9,23 +9,17 @@ using namespace std;
 
 int main()
 {
-    int n;
-    cout<<"Hello World"<<endl<<"Enter the size of the array"<<endl;
-    cin>>n;
-    int a[n],temp;
-    for(int i=0;i<n;i++){
-        cout<<"Enter the data "<<i<<" "<<endl;
-        cin>>a[i];
-    }
+    int a[6]={48,23,56,-1,12,0};
+    int temp, n=sizeof(a)/sizeof(a[0]);
 
-    for(int j=1; j<n;j++){
-        int k=j-1;
-        temp=a[j];
-        while(k>=0 && temp<a[k]){
-            a[k+1]=a[k];
-            k--;
+    for(int i=1; i<n;i++){
+        int j=i-1;
+        temp=a[i];
+        while(j>=0 && temp<a[j]){
+            a[j+1]=a[j];
+            j--;
         }
-        a[k+1]=temp;
+        a[j+1]=temp;
     }
     cout<<"The sorted array is:"<<endl;
     for(int x=0; x<n; x++){
