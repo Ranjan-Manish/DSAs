@@ -1,8 +1,8 @@
 /*Quicksort Algorithm*/
 // Worst Time complexity: O(n^2)
 // Best time complexity: O(n logn)
-/* Sort any given array by partitioning the array with the help of a pivot, which is normally taken as
-   the first element of the array*/
+/* Sort any given array by partitioning the array with the help of a pivot, which is normally taken as the first element of the array. Then all the elements smaller 
+   than the pivot element is on the left side of pivot element and all the elements greater than the pivot element is on the right side of pivot element */
 
 
 #include <bits/stdc++.h>
