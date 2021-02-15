@@ -62,7 +62,7 @@ int main()
     int a[]={15,5,24,8,1,3,16,10,20};
     //int a[]={8,7,6,5,4,3,2,1};
     int lb=0, ub=(sizeof(a)/sizeof(a[0]));
-    mergesort(a,lb,ub);
+    mergesort(a,lb,ub-1);
 
     for(int y=0; y<ub; y++){
         cout<<a[y]<<" ";
